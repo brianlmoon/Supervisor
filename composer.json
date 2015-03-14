@@ -1,0 +1,23 @@
+{
+    "name": "moonspot/supervisor",
+    "type": "library",
+    "description": "Supervises forked processes",
+    "keywords": ["threads","fork","supervisor"],
+    "homepage": "https://github.com/brianlmoon/Supervisor",
+    "license": "BSD",
+    "authors": [
+        {
+            "name": "Brian Moon",
+            "email": "brian@moonspot.net",
+            "homepage": "http://brian.moonspot.net/",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.0"
+    },
+    "autoload": {
+        "psr-4": {
+        "Moonspot\\Supervisor\\": "src/",
+    }
+}

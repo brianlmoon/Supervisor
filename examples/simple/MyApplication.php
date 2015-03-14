@@ -1,36 +1,3 @@
-# Supervisor - Manage a pool of PHP process
-
-The Supervisor class will manage child process by taking a callback to be called after the child is forked. It will restart new children to replace ones that exit.
-
-## Why?
-
-Supervisor is useful for any application that needs to have long running PHP processes.
-
-Modern application development sometimes requires running long running PHP processes. Because Supervisor is PHP, it allows you to fork and manage processes that run existing PHP code without any modification.
-
-One such case is managing Gearman workers. In fact, this project was inspired by how [GearmanManager](https://github.com/brianlmoon/GearmanManager/) manages workers. The plan is to make it the code that handles the process management in future versions of GearmanManager.
-
-## Example
-
-```php
-<?php
-
-// Some Worker Class
-
-class SomeWorker
-{
-    public $keepWorking = true;
-
-    public function doWork()
-    {
-        while($this->keepWorking) {
-            // do stuff
-            usleep(500000);
-        }
-    }
-}
-```
-```php
 <?php
 
 require __DIR__."/../../src/Supervisor.php";
@@ -88,12 +55,3 @@ class MyApplication
         echo "[".date("Y-m-d H:i:s").".$ms] $log\n";
     }
 }
-```
-```php
-<?php
-
-require __DIR__."/MyApplication.php";
-
-$app = new MyApplication();
-$app->startWorkers(10);
-```
