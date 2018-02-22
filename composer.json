@@ -4,7 +4,7 @@
     "description": "Supervises forked processes",
     "keywords": ["threads","fork","supervisor","pcntl_fork"],
     "homepage": "https://github.com/brianlmoon/Supervisor",
-    "license": "BSD",
+    "license": "BSD-3-Clause",
     "authors": [
         {
             "name": "Brian Moon",
